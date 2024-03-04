@@ -1,0 +1,6 @@
+name,time,num_qubits
+\sqrt{iSWAP},0.0928927,2
+Permutation,0.321778,3
+CX,0.0219012,2
+Oracle,3.08394,4
+\sqrt{SWAP},0.0395866,2

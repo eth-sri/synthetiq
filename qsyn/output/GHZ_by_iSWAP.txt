@@ -1,0 +1,70 @@
+Do Gate Operations Normalization
+Reducde to 9->9
+MAX MODULE NUM is : 5
+bool []
+phasing [cirq.ISWAP]
+sp [cirq.Rx(rads=-1.5707963267948966), cirq.Ry(rads=1.5707963267948966)]
+entangle []
+[]
+{cirq.ISWAP: 4, cirq.Rx(rads=-1.5707963267948966): 4, cirq.Ry(rads=1.5707963267948966): 4}
+dict_keys([cirq.ISWAP, cirq.Rx(rads=-1.5707963267948966), cirq.Ry(rads=1.5707963267948966)])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+cost (0, 0, -1)
+None
+** cnt_num_of_passed_module after seeing all modules in pool ** 192
+===================
+curr state
+
+Moment #0 
+	-[ Rx(-0.5π)(0) Rx(-0.5π)(1) Rx(-0.5π)(2)]
+Moment #1 
+	-[ ISWAP(0, 1)]
+Moment #2 
+	-[ ISWAP(0, 2)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 5, 2)
+GEN for ('NoClassical', None)
+GEN DONE 780
+MODULES were  [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('NoClassical', None)]
+================================
+Synthesis Result
+Benchmark : GHZ_by_iSWAP
+Mode : Ours
+================================
+Synthesized QC
+                          ┌─────────────┐
+0: ───Rx(-0.5π)───iSwap────iSwap────────────Rx(-0.5π)───Ry(0.5π)───
+                  │        │
+1: ───Rx(-0.5π)───iSwap────┼────Ry(0.5π)───────────────────────────
+                           │
+2: ───Rx(-0.5π)────────────iSwap───────────────────────────────────
+                          └─────────────┘
+Stacked Moduels
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('NoClassical', None)]
+Elapsed Time :  3.76

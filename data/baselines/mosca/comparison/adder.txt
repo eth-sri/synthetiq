@@ -1,0 +1,11 @@
+#Qubits+ancilla : 4 
+Time for distinct pairs = 0.332407 
+Distinct pairs = 48705 
+Reading ./channel_representations/comparison/adder.txt 
+Test for T-depth 15 
+Sde of given channel rep = 2 
+Hamming wt of given channel rep = 927 
+Reached Clifford. 
+Path = [ 12 :  51 :  63 :  64 :  76 :  115 :  127 : ] 
+
+Execution time = 869.801455 

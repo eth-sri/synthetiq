@@ -1,0 +1,81 @@
+Do Gate Operations Normalization
+Reducde to 48->36
+MAX MODULE NUM is : 5
+bool []
+phasing [cirq.ControlledGate(sub_gate=cirq.S), cirq.ControlledGate(sub_gate=cirq.Z)]
+sp [(cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=True)**-1), cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=True)]
+entangle []
+[cirq.ControlledGate(sub_gate=cirq.Z)]
+{}
+dict_keys([])
+{(cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=True)**-1): cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=True), cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=True): (cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=True)**-1)}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 4
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Bool', {3}), ('Bool', {2, 3}), ('Bool', {2})]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Bool', {2, 3})
+check_order : stacked, targ_diff [] ('Bool', {2, 3})
+cost (0, 0, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': ('Bool', {3}), '|0101⟩': ('Bool', {2, 3}), '|0110⟩': ('Bool', {3}), '|0111⟩': ('Bool', {2, 3}), '|1000⟩': ('Bool', {2}), '|1001⟩': ('Bool', {2}), '|1010⟩': ('Bool', {2}), '|1011⟩': ('Bool', {2}), '|1100⟩': ('Bool', {2, 3}), '|1101⟩': ('Bool', {3}), '|1110⟩': ('Bool', {2, 3}), '|1111⟩': ('Bool', {3})}
+['Bool']
+GEN for ('Bool', {2, 3})
+Further Evolve Start
+GEN DONE 4068
+** cnt_num_of_passed_module after seeing all modules in pool ** 680
+===================
+curr state
+
+Moment #0 
+	-[ qft[norev](2, 3)]
+Moment #1 
+	-[ CZ(2, 0)]
+Moment #2 
+	-[ (cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=True)**-1)(2, 3)]
+
+curr_targ_differ ('Bool', {2, 3})
+check_order : stacked, targ_diff [('Bool', {2, 3})] ('Bool', {2, 3})
+cost (1, 3, -4, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': ('Bool', {3}), '|0101⟩': ('Bool', {2, 3}), '|0110⟩': ('Bool', {3}), '|0111⟩': ('Bool', {2, 3}), '|1000⟩': 'IDENTICAL', '|1001⟩': 'IDENTICAL', '|1010⟩': 'IDENTICAL', '|1011⟩': 'IDENTICAL', '|1100⟩': ('Bool', {3}), '|1101⟩': ('Bool', {2, 3}), '|1110⟩': ('Bool', {3}), '|1111⟩': ('Bool', {2, 3})}
+['Bool']
+GEN for ('Bool', {2, 3})
+Further Evolve Start
+GEN DONE 4068
+MODULES were  [('Bool', {2, 3}), ('Bool', {2, 3})]
+================================
+Synthesis Result
+Benchmark : draper
+Mode : Ours
+================================
+Synthesized QC
+0: ────────────────Z────────────────────────────────────────────────────────
+                   │
+1: ────────────────┼────────────────────────────────S───Z───────────────────
+                   │                                │   │
+2: ───qft[norev]───@───qft[norev]^-1───qft[norev]───@───┼───qft[norev]^-1───
+      │                │               │                │   │
+3: ───#2───────────────#2──────────────#2───────────────@───#2──────────────
+Stacked Moduels
+[('Bool', {2, 3}), ('Bool', {2, 3})]
+Elapsed Time :  1075.64

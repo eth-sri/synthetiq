@@ -1,0 +1,18 @@
+{
+    "ID": "bit_measure",
+    "Spec Type": "Partial Spec",
+    "Spec": {
+        "qreg_size": "4",
+        "max_inst_allowed": "10",
+        "spec_object": [
+            {
+                "input":  "1,  0,  0,  0,  0, 0, 0, 0, 0,  0,  0,  0,  0, 0, 0, 0 ",
+                "output": "0.40824829046,  0, 0,  0, 0,0.40824829046, 0.40824829046, 0,  0, 0.40824829046, 0.40824829046, 0, 0, 0, 0, 0.40824829046"
+            }
+        ],
+        "components": "G3,CH,H, X,CNOT,Toffoli"
+    },
+    "Equiv Phase" : true
+}
+
+

@@ -1,0 +1,12 @@
+# Mac
+.DS_Store
+
+#unnecessary files - delete later
+notebooks/
+result/
+record/
+.ipynb_checkpoints/
+*.pyc
+*.ipynb
+test/
+.vscode/

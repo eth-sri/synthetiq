@@ -1,0 +1,28 @@
+{
+    "ID": "9",
+    "Spec Type": "Partial Spec",
+    "Spec": {
+        "qreg_size": "2",
+        "max_inst_allowed": "100",
+        "spec_object": [
+            {
+                "input": "1, 0, 0, 0",
+                "output": "1, 0, 0, 0"
+            },
+            {
+                "input": "0, 1, 0, 0",
+                "output": "0, 0.7071067811865475, 0.7071067811865475j, 0"
+            },
+            {
+                "input": "0, 0, 1, 0",
+                "output": "0, 0.7071067811865475j, 0.7071067811865475, 0"
+            },
+            {
+                "input": "0, 0, 0, 1",
+                "output": "0, 0, 0, 1"
+            }
+        ],
+        "components": "SCZ,S,T,H,T_REV,S_REV"
+    },
+    "Equiv Phase": true
+}

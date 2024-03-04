@@ -1,0 +1,201 @@
+Do Gate Operations Normalization
+Reducde to 18->18
+MAX MODULE NUM is : 5
+bool [cirq.CNOT]
+phasing []
+sp [cirq.ControlledGate(sub_gate=(cirq.X**-0.5)), cirq.ControlledGate(sub_gate=(cirq.X**0.5))]
+entangle []
+[cirq.CNOT]
+{cirq.ControlledGate(sub_gate=(cirq.X**-0.5)): 4, cirq.ControlledGate(sub_gate=(cirq.X**0.5)): 4}
+dict_keys([cirq.ControlledGate(sub_gate=(cirq.X**-0.5)), cirq.ControlledGate(sub_gate=(cirq.X**0.5))])
+{cirq.ControlledGate(sub_gate=(cirq.X**-0.5)): cirq.ControlledGate(sub_gate=(cirq.X**0.5)), cirq.ControlledGate(sub_gate=(cirq.X**0.5)): cirq.ControlledGate(sub_gate=(cirq.X**-0.5))}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Bool', {2})]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Bool', {2})
+check_order : stacked, targ_diff [] ('Bool', {2})
+cost (0, 0, 0, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': 'IDENTICAL', '|011⟩': 'IDENTICAL', '|100⟩': 'IDENTICAL', '|101⟩': 'IDENTICAL', '|110⟩': ('Bool', {2}), '|111⟩': ('Bool', {2})}
+['Bool']
+GEN for ('Bool', {2})
+GEN DONE 448
+** cnt_num_of_passed_module after seeing all modules in pool ** 258
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 2)]
+
+curr_targ_differ ('Bool', {2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {2})
+cost (1, 1, -2, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': ('Bool', {2}), '|011⟩': ('Bool', {2}), '|100⟩': 'IDENTICAL', '|101⟩': 'IDENTICAL', '|110⟩': 'IDENTICAL', '|111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {2})
+GEN DONE 448
+** cnt_num_of_passed_module after seeing all modules in pool ** 228
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 2)]
+
+curr_targ_differ ('Bool', {2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {2})
+cost (1, 1, -2, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': 'IDENTICAL', '|011⟩': 'IDENTICAL', '|100⟩': ('Bool', {2}), '|101⟩': ('Bool', {2}), '|110⟩': 'IDENTICAL', '|111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {2})
+GEN DONE 448
+** cnt_num_of_passed_module after seeing all modules in pool ** 230
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 1)]
+
+curr_targ_differ ('Bool', {1, 2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {1, 2})
+cost (1, 1, 0, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': ('Bool', {1}), '|010⟩': 'IDENTICAL', '|011⟩': ('Bool', {1}), '|100⟩': 'IDENTICAL', '|101⟩': ('Bool', {1}), '|110⟩': ('Bool', {2}), '|111⟩': ('Bool', {1, 2})}
+['Bool']
+GEN for ('Bool', {1, 2})
+GEN DONE 474
+** cnt_num_of_passed_module after seeing all modules in pool ** 364
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {0, 2})
+cost (1, 1, 0, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': ('Bool', {0}), '|010⟩': 'IDENTICAL', '|011⟩': ('Bool', {0}), '|100⟩': 'IDENTICAL', '|101⟩': ('Bool', {0}), '|110⟩': ('Bool', {2}), '|111⟩': ('Bool', {0, 2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+GEN DONE 474
+** cnt_num_of_passed_module after seeing all modules in pool ** 364
+===================
+curr state
+
+Moment #0 
+	-[ CX**0.5(1, 2)]
+Moment #1 
+	-[ CX**0.5(1, 2)]
+
+curr_targ_differ ('Bool', {2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {2})
+cost (1, 2, -2, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': ('Bool', {2}), '|011⟩': ('Bool', {2}), '|100⟩': 'IDENTICAL', '|101⟩': 'IDENTICAL', '|110⟩': 'IDENTICAL', '|111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {2})
+GEN DONE 448
+** cnt_num_of_passed_module after seeing all modules in pool ** 228
+===================
+curr state
+
+Moment #0 
+	-[ CX**0.5(0, 2)]
+Moment #1 
+	-[ CX**0.5(0, 2)]
+
+curr_targ_differ ('Bool', {2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {2})
+cost (1, 2, -2, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': 'IDENTICAL', '|011⟩': 'IDENTICAL', '|100⟩': ('Bool', {2}), '|101⟩': ('Bool', {2}), '|110⟩': 'IDENTICAL', '|111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {2})
+GEN DONE 448
+** cnt_num_of_passed_module after seeing all modules in pool ** 230
+===================
+curr state
+
+Moment #0 
+	-[ CX**-0.5(1, 2)]
+Moment #1 
+	-[ CX**-0.5(1, 2)]
+
+curr_targ_differ ('Bool', {2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {2})
+cost (1, 2, -2, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': ('Bool', {2}), '|011⟩': ('Bool', {2}), '|100⟩': 'IDENTICAL', '|101⟩': 'IDENTICAL', '|110⟩': 'IDENTICAL', '|111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {2})
+GEN DONE 448
+** cnt_num_of_passed_module after seeing all modules in pool ** 228
+===================
+curr state
+
+Moment #0 
+	-[ CX**-0.5(0, 2)]
+Moment #1 
+	-[ CX**-0.5(0, 2)]
+
+curr_targ_differ ('Bool', {2})
+check_order : stacked, targ_diff [('Bool', {2})] ('Bool', {2})
+cost (1, 2, -2, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': 'IDENTICAL', '|011⟩': 'IDENTICAL', '|100⟩': ('Bool', {2}), '|101⟩': ('Bool', {2}), '|110⟩': 'IDENTICAL', '|111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {2})
+GEN DONE 448
+** cnt_num_of_passed_module after seeing all modules in pool ** 230
+===================
+curr state
+
+Moment #0 
+	-[ CX**0.5(1, 2)]
+Moment #1 
+	-[ CX**0.5(0, 2)]
+
+curr_targ_differ ('NoClassical', {2})
+check_order : stacked, targ_diff [('Bool', {2})] ('NoClassical', {2})
+cost (1, 2, -2, 1)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': 'IDENTICAL', '|010⟩': ('NoClassical', {2}), '|011⟩': ('NoClassical', {2}), '|100⟩': ('NoClassical', {2}), '|101⟩': ('NoClassical', {2}), '|110⟩': 'IDENTICAL', '|111⟩': 'IDENTICAL'}
+['NoClassical']
+GEN for ('NoClassical', {2})
+GEN DONE 5244
+MODULES were  [('Bool', {2}), ('NoClassical', {2})]
+================================
+Synthesis Result
+Benchmark : toffoli_by_sqrt_X
+Mode : Ours
+================================
+Synthesized QC
+0: ───────────@───────X───@────────X───
+              │       │   │        │
+1: ───@───────┼───────@───┼────────@───
+      │       │           │
+2: ───X^0.5───X^0.5───────X^-0.5───────
+Stacked Moduels
+[('Bool', {2}), ('NoClassical', {2})]
+Elapsed Time :  379.51

@@ -1,0 +1,9 @@
+#Qubits+ancilla : 3 
+Time for distinct pairs = 0.017474 
+Distinct pairs = 2961 
+Reading ./channel_representations/comparison/cch.txt 
+Test for T-depth 80 
+Sde of given channel rep = 4 
+Hamming wt of given channel rep = 371 
+
+Execution time = 326.040226 

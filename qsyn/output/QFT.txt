@@ -1,0 +1,167 @@
+Do Gate Operations Normalization
+Reducde to 18->12
+MAX MODULE NUM is : 5
+bool [cirq.SWAP]
+phasing [cirq.ControlledGate(sub_gate=cirq.S), cirq.ControlledGate(sub_gate=cirq.T)]
+sp [cirq.H]
+entangle []
+[cirq.H, cirq.SWAP]
+{cirq.ControlledGate(sub_gate=cirq.S): 4, cirq.ControlledGate(sub_gate=cirq.T): 4}
+dict_keys([cirq.ControlledGate(sub_gate=cirq.S), cirq.ControlledGate(sub_gate=cirq.T)])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('NoClassical', {0, 1, 2})]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('NoClassical', {0, 1, 2})
+check_order : stacked, targ_diff [] ('NoClassical', {0, 1, 2})
+cost (0, 0, 0, 1)
+Choose Best Count Attribute!
+{'|000⟩': ('NoClassical', {0, 1, 2}), '|001⟩': ('NoClassical', {0, 1, 2}), '|010⟩': ('NoClassical', {0, 1, 2}), '|011⟩': ('NoClassical', {0, 1, 2}), '|100⟩': ('NoClassical', {0, 1, 2}), '|101⟩': ('NoClassical', {0, 1, 2}), '|110⟩': ('NoClassical', {0, 1, 2}), '|111⟩': ('NoClassical', {0, 1, 2})}
+['NoClassical']
+GEN for ('NoClassical', {0, 1, 2})
+GEN DONE 954
+** cnt_num_of_passed_module after seeing all modules in pool ** 6
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1) H(2)]
+
+curr_targ_differ ('PHASING', None)
+check_order : stacked, targ_diff [('NoClassical', {0, 1, 2})] ('PHASING', None)
+cost (1, 3, -1, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': ('PHASING', None), '|010⟩': ('PHASING', None), '|011⟩': ('PHASING', None), '|100⟩': ('Bool', None), '|101⟩': ('PHASING', None), '|110⟩': ('PHASING', None), '|111⟩': ('PHASING', None)}
+['PHASING']
+GEN for ('PHASING', None)
+GEN DONE 756
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1) H(2)]
+Moment #1 
+	-[ H(1)]
+Moment #2 
+	-[ CS(2, 1)]
+Moment #3 
+	-[ H(1)]
+
+curr_targ_differ ('PHASING', None)
+check_order : stacked, targ_diff [('NoClassical', {0, 1, 2}), ('PHASING', None)] ('PHASING', None)
+cost (2, 6, -2, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': ('PHASING', None), '|010⟩': 'IDENTICAL', '|011⟩': ('PHASING', None), '|100⟩': ('Bool', None), '|101⟩': ('PHASING', None), '|110⟩': ('Bool', None), '|111⟩': ('PHASING', None)}
+['PHASING']
+GEN for ('PHASING', None)
+GEN DONE 756
+** cnt_num_of_passed_module after seeing all modules in pool ** 1
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1) H(2)]
+Moment #1 
+	-[ H(1)]
+Moment #2 
+	-[ CS(0, 1)]
+Moment #3 
+	-[ H(1)]
+
+curr_targ_differ ('PHASING', None)
+check_order : stacked, targ_diff [('NoClassical', {0, 1, 2}), ('PHASING', None)] ('PHASING', None)
+cost (2, 6, -1, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': ('PHASING', None), '|010⟩': ('Bool', None), '|011⟩': ('PHASING', None), '|100⟩': ('Bool', None), '|101⟩': ('PHASING', None), '|110⟩': ('Bool', None), '|111⟩': ('PHASING', None)}
+['PHASING']
+GEN for ('PHASING', None)
+GEN DONE 756
+** cnt_num_of_passed_module after seeing all modules in pool ** 6
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1) H(2)]
+Moment #1 
+	-[ H(1) H(2)]
+Moment #2 
+	-[ CS(0, 1)]
+Moment #3 
+	-[ CT(0, 2) H(1)]
+Moment #4 
+	-[ H(2)]
+
+curr_targ_differ ('PHASING', None)
+check_order : stacked, targ_diff [('NoClassical', {0, 1, 2}), ('PHASING', None), ('PHASING', None)] ('PHASING', None)
+cost (3, 9, -1, 0)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': ('PHASING', None), '|010⟩': ('Bool', None), '|011⟩': ('PHASING', None), '|100⟩': ('Bool', None), '|101⟩': ('PHASING', None), '|110⟩': ('Bool', None), '|111⟩': ('PHASING', None)}
+['PHASING']
+GEN for ('PHASING', None)
+GEN DONE 756
+** cnt_num_of_passed_module after seeing all modules in pool ** 5
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1) H(2)]
+Moment #1 
+	-[ H(1) H(2)]
+Moment #2 
+	-[ CS(0, 1)]
+Moment #3 
+	-[ CT(0, 2) H(1)]
+Moment #4 
+	-[ H(2)]
+Moment #5 
+	-[ H(2)]
+Moment #6 
+	-[ CS(2, 1)]
+Moment #7 
+	-[ H(2)]
+
+curr_targ_differ ('Bool', None)
+check_order : stacked, targ_diff [('NoClassical', {0, 1, 2}), ('PHASING', None), ('PHASING', None), ('PHASING', None)] ('Bool', None)
+cost (-10000,)
+Choose Best Count Attribute!
+{'|000⟩': 'IDENTICAL', '|001⟩': ('Bool', None), '|010⟩': ('Bool', None), '|011⟩': ('Bool', None), '|100⟩': ('Bool', None), '|101⟩': ('Bool', None), '|110⟩': ('Bool', None), '|111⟩': ('Bool', None)}
+['Bool']
+GEN for ('Bool', None)
+GEN DONE 36
+MODULES were  [('NoClassical', {0, 1, 2}), ('PHASING', None), ('PHASING', None), ('PHASING', None), ('Bool', None)]
+================================
+Synthesis Result
+Benchmark : QFT
+Mode : Ours
+================================
+Synthesized QC
+                  ┌──┐
+0: ───H───────@─────@────────────────────×───
+              │     │                    │
+1: ───H───H───S────H┼────────────S───────┼───
+                    │            │       │
+2: ───H───H─────────T────H───H───@───H───×───
+                  └──┘
+Stacked Moduels
+[('NoClassical', {0, 1, 2}), ('PHASING', None), ('PHASING', None), ('PHASING', None), ('Bool', None)]
+Elapsed Time :  339.05

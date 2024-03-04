@@ -1,0 +1,45 @@
+Do Gate Operations Normalization
+Reducde to 48->48
+MAX MODULE NUM is : 5
+bool [cirq.CNOT, cirq.TOFFOLI, cirq.X]
+phasing []
+sp [cirq.ControlledGate(sub_gate=cirq.H), cirq.H, cirq.Ry(rads=1.9106332362490184)]
+entangle []
+[cirq.ControlledGate(sub_gate=cirq.H), cirq.CNOT, cirq.H, cirq.TOFFOLI, cirq.X]
+{cirq.Ry(rads=1.9106332362490184): 4}
+dict_keys([cirq.Ry(rads=1.9106332362490184)])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 4
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})}))
+cost (0, 0, -1)
+None
+TIMEOUT
+TIMEOUT was 3600
+================================
+Synthesis Result
+Benchmark : bit_measure
+Mode : Ours
+================================
+None Found

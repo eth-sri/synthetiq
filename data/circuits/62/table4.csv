@@ -1,0 +1,6 @@
+operator,t_depth,qubits,baseline_t_depth
+rcccx,4,4,8
+cct,9,4,9
+cciswap,8,4,6
+csqrtiswap,6,3,27
+csqrtswap,5,4,29

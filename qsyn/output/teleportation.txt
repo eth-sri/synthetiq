@@ -1,0 +1,69 @@
+Do Gate Operations Normalization
+Reducde to 9->9
+MAX MODULE NUM is : 5
+bool [cirq.CNOT]
+phasing []
+sp [cirq.H]
+entangle []
+[cirq.CNOT, cirq.H]
+{}
+dict_keys([])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})}))
+cost (0, 0, 0, 2)
+{'|000⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), '|001⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), '|010⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), '|011⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), '|100⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), '|101⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), '|110⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), '|111⟩': ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 2)]
+
+curr_targ_differ ('NoClassical', {0})
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})}))] ('NoClassical', {0})
+cost (1, 2, 0, 1)
+Choose Best Count Attribute!
+{'|000⟩': ('NoClassical', {0}), '|001⟩': ('NoClassical', {0}), '|010⟩': ('NoClassical', {0}), '|011⟩': ('NoClassical', {0}), '|100⟩': ('NoClassical', {0}), '|101⟩': ('NoClassical', {0}), '|110⟩': ('NoClassical', {0}), '|111⟩': ('NoClassical', {0})}
+['NoClassical']
+GEN for ('NoClassical', {0})
+GEN DONE 447
+MODULES were  [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), ('NoClassical', {0})]
+================================
+Synthesis Result
+Benchmark : teleportation
+Mode : Ours
+================================
+Synthesized QC
+0: ───────────@───H───
+              │
+1: ───H───@───X───────
+          │
+2: ───────X───────────
+Stacked Moduels
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({1, 2}), frozenset({0})})), ('NoClassical', {0})]
+Elapsed Time :  2.19

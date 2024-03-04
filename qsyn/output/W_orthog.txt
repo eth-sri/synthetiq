@@ -1,0 +1,90 @@
+Do Gate Operations Normalization
+Reducde to 18->18
+MAX MODULE NUM is : 5
+bool [cirq.CNOT, cirq.X]
+phasing []
+sp [cirq.ControlledGate(sub_gate=cirq.H), cirq.Ry(rads=1.9106332362490184)]
+entangle []
+[cirq.ControlledGate(sub_gate=cirq.H), cirq.CNOT, cirq.X]
+{cirq.Ry(rads=1.9106332362490184): 4}
+dict_keys([cirq.Ry(rads=1.9106332362490184)])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+cost (0, 0, -1)
+None
+** cnt_num_of_passed_module after seeing all modules in pool ** 288
+===================
+curr state
+
+Moment #0 
+	-[ Ry(0.6081734479693927π)(0)]
+Moment #1 
+	-[ CH(0, 1)]
+Moment #2 
+	-[ CNOT(0, 2)]
+
+curr_targ_differ ('PHASING', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('PHASING', None)
+cost (1, 3, 0)
+GEN for ('PHASING', None)
+GEN DONE 165
+** cnt_num_of_passed_module after seeing all modules in pool ** 15
+===================
+curr state
+
+Moment #0 
+	-[ Ry(0.6081734479693927π)(0)]
+Moment #1 
+	-[ CH(0, 1)]
+Moment #2 
+	-[ CNOT(0, 2)]
+Moment #3 
+	-[ CH(2, 1)]
+Moment #4 
+	-[ X(1)]
+Moment #5 
+	-[ CH(2, 1)]
+
+curr_targ_differ ('Bool', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('PHASING', None)] ('Bool', None)
+cost (-10000,)
+GEN for ('Bool', None)
+GEN DONE 786
+MODULES were  [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('PHASING', None), ('Bool', None)]
+================================
+Synthesis Result
+Benchmark : W_orthog
+Mode : Ours
+================================
+Synthesized QC
+0: ───Ry(0.608π)───@───@───X───────────────
+                   │   │
+1: ────────────────H───┼───H───X───H───@───
+                       │   │       │   │
+2: ────────────────────X───@───────@───X───
+Stacked Moduels
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('PHASING', None), ('Bool', None)]
+Elapsed Time :  4.5

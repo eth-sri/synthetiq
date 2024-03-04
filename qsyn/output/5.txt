@@ -1,0 +1,782 @@
+Do Gate Operations Normalization
+Reducde to 32->32
+MAX MODULE NUM is : 5
+bool [cirq.CNOT]
+phasing [cirq.S, (cirq.S**-1), cirq.T, (cirq.T**-1)]
+sp [cirq.H]
+entangle []
+[cirq.CNOT, cirq.H]
+{cirq.S: 8, (cirq.S**-1): 8, cirq.T: 8, (cirq.T**-1): 8}
+dict_keys([cirq.S, (cirq.S**-1), cirq.T, (cirq.T**-1)])
+{cirq.S: (cirq.S**-1), (cirq.S**-1): cirq.S, cirq.T: (cirq.T**-1), (cirq.T**-1): cirq.T}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 4
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Bool', {0})]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [] ('Bool', {0})
+cost (0, 0, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': ('Bool', {0}), '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 13592
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 1, -2, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 11654
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 1, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0}), '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 1, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 3)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 1, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': ('Bool', {0}), '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 13592
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 2)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 1, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': ('Bool', {0}), '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 13592
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 1, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': ('Bool', {0}), '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 13592
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 0)]
+Moment #1 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -2, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': ('Bool', {0}), '|0011⟩': 'IDENTICAL', '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': 'IDENTICAL', '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 9590
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 0)]
+Moment #1 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -2, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': ('Bool', {0}), '|0011⟩': 'IDENTICAL', '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': 'IDENTICAL', '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 9590
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 3)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -2, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 11654
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 2)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -2, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 11654
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -2, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': 'IDENTICAL', '|0011⟩': 'IDENTICAL', '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 11654
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 2)]
+Moment #1 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 2})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0, 2}), '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {2}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {2}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0) CNOT(3, 2)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 2})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {2}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {2}), '|0100⟩': ('Bool', {0}), '|0101⟩': ('Bool', {2}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0, 2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 0) CNOT(3, 1)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {1}), '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0, 1}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0, 1}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0, 1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0, 1}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0, 1}), '|0100⟩': ('Bool', {0}), '|0101⟩': ('Bool', {0, 1}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 0)]
+Moment #1 
+	-[ CNOT(2, 3)]
+
+curr_targ_differ ('Bool', {0, 3})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 3})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': ('Bool', {3}), '|0011⟩': ('Bool', {0, 3}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0, 3}), '|0111⟩': ('Bool', {0, 3})}
+['Bool']
+GEN for ('Bool', {0, 3})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 1) CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': ('Bool', {1}), '|0011⟩': ('Bool', {0, 1}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0, 1}), '|0111⟩': ('Bool', {0, 1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 0)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0}), '|0100⟩': ('Bool', {0}), '|0101⟩': ('Bool', {0}), '|0110⟩': 'IDENTICAL', '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 3)]
+Moment #1 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0, 3})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 3})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': ('Bool', {0, 3}), '|0011⟩': ('Bool', {3}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {3}), '|0111⟩': ('Bool', {3})}
+['Bool']
+GEN for ('Bool', {0, 3})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0) CNOT(2, 3)]
+
+curr_targ_differ ('Bool', {0, 3})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 3})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {3}), '|0011⟩': ('Bool', {3}), '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {3}), '|0111⟩': ('Bool', {0, 3})}
+['Bool']
+GEN for ('Bool', {0, 3})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 1) CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': ('Bool', {1}), '|0011⟩': ('Bool', {0, 1}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0, 1}), '|0111⟩': ('Bool', {0, 1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {0, 1}), '|0011⟩': ('Bool', {0, 1}), '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0, 1}), '|0111⟩': ('Bool', {1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 0)]
+Moment #1 
+	-[ CNOT(3, 2)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 2})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {2}), '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0, 2}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0, 2}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0, 2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 0) CNOT(3, 1)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {1}), '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0, 1}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0, 1}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0, 1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(2, 0)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0}), '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0}), '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0) CNOT(3, 2)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 2})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {2}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {2}), '|0100⟩': ('Bool', {0}), '|0101⟩': ('Bool', {2}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0, 2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0)]
+Moment #1 
+	-[ CNOT(3, 1)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {1}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {1}), '|0100⟩': ('Bool', {0}), '|0101⟩': ('Bool', {1}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0, 1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0)]
+Moment #1 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0}), '|0100⟩': ('Bool', {0}), '|0101⟩': ('Bool', {0}), '|0110⟩': 'IDENTICAL', '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0) CNOT(2, 3)]
+
+curr_targ_differ ('Bool', {0, 3})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 3})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {3}), '|0011⟩': ('Bool', {3}), '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {3}), '|0111⟩': ('Bool', {0, 3})}
+['Bool']
+GEN for ('Bool', {0, 3})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0)]
+Moment #1 
+	-[ CNOT(2, 1)]
+
+curr_targ_differ ('Bool', {0, 1})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 1})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {1}), '|0011⟩': ('Bool', {1}), '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {1}), '|0111⟩': ('Bool', {0, 1})}
+['Bool']
+GEN for ('Bool', {0, 1})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(1, 0)]
+Moment #1 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0}), '|0100⟩': ('Bool', {0}), '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0}), '|0111⟩': 'IDENTICAL'}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 3)]
+Moment #1 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0}), '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 3)]
+Moment #1 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 2)]
+Moment #1 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0}), '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 2)]
+Moment #1 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 1)]
+Moment #1 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': 'IDENTICAL', '|0110⟩': ('Bool', {0}), '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 1)]
+Moment #1 
+	-[ CNOT(2, 0)]
+
+curr_targ_differ ('Bool', {0})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0})
+cost (1, 2, -1, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': 'IDENTICAL', '|0010⟩': ('Bool', {0}), '|0011⟩': ('Bool', {0}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0}), '|0110⟩': 'IDENTICAL', '|0111⟩': ('Bool', {0})}
+['Bool']
+GEN for ('Bool', {0})
+Further Evolve Start
+GEN DONE 16334
+** cnt_num_of_passed_module after seeing all modules in pool ** 16264
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 2)]
+Moment #1 
+	-[ CNOT(3, 0)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 2})
+cost (1, 2, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {0, 2}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {0, 2}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {2}), '|0110⟩': ('Bool', {0}), '|0111⟩': ('Bool', {0, 2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 2)]
+Moment #1 
+	-[ CNOT(0, 3)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 2})
+cost (1, 2, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {2}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {2}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0, 2}), '|0110⟩': ('Bool', {0}), '|0111⟩': ('Bool', {2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(3, 2)]
+Moment #1 
+	-[ CNOT(0, 2)]
+
+curr_targ_differ ('Bool', {0, 2})
+check_order : stacked, targ_diff [('Bool', {0})] ('Bool', {0, 2})
+cost (1, 2, 0, 0)
+3
+Choose Best Count Attribute!
+{'|0000⟩': 'IDENTICAL', '|0001⟩': ('Bool', {2}), '|0010⟩': 'IDENTICAL', '|0011⟩': ('Bool', {2}), '|0100⟩': 'IDENTICAL', '|0101⟩': ('Bool', {0, 2}), '|0110⟩': ('Bool', {0}), '|0111⟩': ('Bool', {2})}
+['Bool']
+GEN for ('Bool', {0, 2})
+Further Evolve Start
+GEN DONE 18194
+** cnt_num_of_passed_module after seeing all modules in pool ** 18072
+===================
+curr state
+
+Moment #0 
+	-[ CNOT(0, 1) CNOT(3, 2)]
+

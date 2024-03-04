@@ -1,0 +1,68 @@
+Do Gate Operations Normalization
+Reducde to 9->9
+MAX MODULE NUM is : 5
+bool [cirq.X]
+phasing [cirq.CZ]
+sp [cirq.H]
+entangle []
+[cirq.CZ, cirq.H, cirq.X]
+{}
+dict_keys([])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+cost (0, 0, -1)
+None
+** cnt_num_of_passed_module after seeing all modules in pool ** 6
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1) H(2)]
+Moment #1 
+	-[ CZ(0, 1)]
+Moment #2 
+	-[ CZ(0, 2)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 5, 2)
+GEN for ('NoClassical', None)
+GEN DONE 444
+MODULES were  [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('NoClassical', None)]
+================================
+Synthesis Result
+Benchmark : GHZ_Game
+Mode : Ours
+================================
+Synthesized QC
+0: ───H───@───@───X───H───
+          │   │
+1: ───H───@───┼───@───────
+              │   │
+2: ───H───────@───@───────
+Stacked Moduels
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('NoClassical', None)]
+Elapsed Time :  0.86

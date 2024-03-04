@@ -1,0 +1,278 @@
+Do Gate Operations Normalization
+Reducde to 9->9
+MAX MODULE NUM is : 5
+bool []
+phasing []
+sp [cirq.H, cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=False)]
+entangle []
+[cirq.H]
+{cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=False): 4}
+dict_keys([cirq.QuantumFourierTransformGate(num_qubits=2, without_reverse=False)])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+cost (0, 0, -1)
+None
+** cnt_num_of_passed_module after seeing all modules in pool ** 24
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ qft(1, 0)]
+Moment #2 
+	-[ qft(2, 0)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ qft(1, 0)]
+Moment #2 
+	-[ qft(2, 1)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ qft(2, 0)]
+Moment #2 
+	-[ qft(1, 0)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ qft(2, 0)]
+Moment #2 
+	-[ qft(1, 2)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ qft(0, 1)]
+Moment #2 
+	-[ qft(2, 0)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ qft(0, 1)]
+Moment #2 
+	-[ qft(2, 1)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ qft(2, 1)]
+Moment #2 
+	-[ qft(0, 1)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ qft(2, 1)]
+Moment #2 
+	-[ qft(0, 2)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(2)]
+Moment #1 
+	-[ qft(0, 2)]
+Moment #2 
+	-[ qft(1, 0)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(2)]
+Moment #1 
+	-[ qft(0, 2)]
+Moment #2 
+	-[ qft(1, 2)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(2)]
+Moment #1 
+	-[ qft(1, 2)]
+Moment #2 
+	-[ qft(0, 1)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(2)]
+Moment #1 
+	-[ qft(1, 2)]
+Moment #2 
+	-[ qft(0, 2)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 3, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1)]
+Moment #1 
+	-[ qft(2, 0)]
+Moment #2 
+	-[ qft(0, 1)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 4, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+** cnt_num_of_passed_module after seeing all modules in pool ** 0
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1)]
+Moment #1 
+	-[ qft(2, 0)]
+Moment #2 
+	-[ qft(2, 1)]
+
+curr_targ_differ ('NoClassical', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('NoClassical', None)
+cost (1, 4, 2)
+GEN for ('NoClassical', None)
+GEN DONE 753
+MODULES were  [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('NoClassical', None)]
+================================
+Synthesis Result
+Benchmark : GHZ_by_QFT
+Mode : Ours
+================================
+Synthesized QC
+                            ┌────┐
+0: ───H───#2─────────────────#2──────
+          │                  │
+1: ───H───┼─────#2────#2─────┼──H────
+          │     │     │      │
+2: ───────qft───qft───qft────qft─────
+                            └────┘
+Stacked Moduels
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('NoClassical', None)]
+Elapsed Time :  53.76

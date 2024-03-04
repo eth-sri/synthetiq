@@ -1,0 +1,18 @@
+Number of qubits is  3
+Matrix size N :  64
+Given output file name =  ./output/permutations/3qbs/29.txt
+Total no of pairs =  3969
+Preprocess time :Distinct pairs =  0.0177614688873291
+Number of distinct pairs are = 2961
+File name given :  ./channel_representations/permutations/3qbs/29.txt
+Reading file :  ./channel_representations/permutations/3qbs/29.txt
+File reading : RP_3.txt
+Test for T-count  20
+Testing for count : 3
+Testing for count : 4
+Testing for count : 5
+Testing for count : 6
+Testing for count : 7
+Reached Clifford.
+Path :  [15, 21, 26, 38, 41, 51, 60]
+Execution time :  9.32231330871582

@@ -1,0 +1,991 @@
+Do Gate Operations Normalization
+Reducde to 12->12
+MAX MODULE NUM is : 5
+bool [cirq.CNOT]
+phasing [cirq.S, (cirq.S**-1), cirq.T, (cirq.T**-1)]
+sp [cirq.H]
+entangle []
+[cirq.CNOT, cirq.H]
+{cirq.S: 8, (cirq.S**-1): 8, cirq.T: 8, (cirq.T**-1): 8}
+dict_keys([cirq.S, (cirq.S**-1), cirq.T, (cirq.T**-1)])
+{cirq.S: (cirq.S**-1), (cirq.S**-1): cirq.S, cirq.T: (cirq.T**-1), (cirq.T**-1): cirq.T}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 2
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (0, 0, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': 'IDENTICAL'}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (1, 2, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (1, 2, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (2, 5, 0, 3)
+{'|00⟩': ('NoClassical', {0}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (2, 5, 0, 3)
+{'|00⟩': ('NoClassical', {1}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (2, 5, 0, 3)
+{'|00⟩': ('NoClassical', {0}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (2, 5, 0, 3)
+{'|00⟩': ('NoClassical', {1}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('PHASING', None)}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('PHASING', None)}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('Bool', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('Bool', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('Bool', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('Bool', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('PHASING', None)}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (3, 7, 0, 2)
+{'|00⟩': 'IDENTICAL', '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('PHASING', None)}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (3, 8, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (3, 8, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (3, 8, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (3, 8, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))
+cost (4, 9, 0, 2)
+{'|00⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), '|01⟩': ('PHASING', None), '|10⟩': ('PHASING', None), '|11⟩': ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))}
+** cnt_num_of_passed_module after seeing all modules in pool ** 2
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {0}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {1}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {0}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {1}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {0}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(0, 1)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(1, 0)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {1}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(0, 1)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {0}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {0})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+===================
+curr state
+
+Moment #0 
+	-[ H(1)]
+Moment #1 
+	-[ CNOT(1, 0)]
+Moment #2 
+	-[ H(0) H(1)]
+Moment #3 
+	-[ CNOT(1, 0)]
+Moment #4 
+	-[ H(0) H(1)]
+Moment #5 
+	-[ CNOT(0, 1)]
+Moment #6 
+	-[ H(0) H(1)]
+Moment #7 
+	-[ CNOT(1, 0)]
+
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})})), ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Entangle', ({frozenset({0, 1})}, {frozenset({1}), frozenset({0})}))] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (4, 11, 0, 3)
+{'|00⟩': ('NoClassical', {1}), '|01⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|10⟩': ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), '|11⟩': ('NoClassical', {1})}
+** cnt_num_of_passed_module after seeing all modules in pool ** 3
+Not Found. State Search is Over.
+================================
+Synthesis Result
+Benchmark : 3
+Mode : Ours
+================================
+None Found

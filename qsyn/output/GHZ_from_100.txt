@@ -1,0 +1,68 @@
+Do Gate Operations Normalization
+Reducde to 9->9
+MAX MODULE NUM is : 5
+bool [cirq.CNOT]
+phasing []
+sp [cirq.H]
+entangle []
+[cirq.CNOT, cirq.H]
+{}
+dict_keys([])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 3
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))
+cost (0, 0, -1)
+None
+** cnt_num_of_passed_module after seeing all modules in pool ** 24
+===================
+curr state
+
+Moment #0 
+	-[ H(0)]
+Moment #1 
+	-[ CNOT(0, 1)]
+Moment #2 
+	-[ CNOT(0, 2)]
+
+curr_targ_differ ('PHASING', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})}))] ('PHASING', None)
+cost (1, 3, 0)
+GEN for ('PHASING', None)
+GEN DONE 12
+MODULES were  [('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('PHASING', None)]
+================================
+Synthesis Result
+Benchmark : GHZ_from_100
+Mode : Ours
+================================
+Synthesized QC
+0: ───H───@───@───────────────
+          │   │
+1: ───────X───┼───────@───────
+              │       │
+2: ───────────X───H───X───H───
+Stacked Moduels
+[('Entangle', ({frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2})})), ('PHASING', None)]
+Elapsed Time :  0.74

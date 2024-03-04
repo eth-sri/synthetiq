@@ -1,0 +1,116 @@
+1
+OUT:
+T-depth: 3
+Took: 155553 ms
+2
+OUT:
+T-depth: 5
+Took: 72981 ms
+3
+OUT:
+T-depth: 6
+Took: 207904 ms
+4
+OUT:
+T-depth: 4
+Took: 48072 ms
+5
+OUT:
+T-depth: 3
+Took: 148338 ms
+6
+OUT:
+T-depth: 5
+Took: 64495 ms
+7
+OUT:
+none
+Took: 488688 ms
+8
+OUT:
+T-depth: 5
+Took: 82030 ms
+9
+OUT:
+none
+Took: 4900752 ms
+10
+OUT:
+none
+Took: 473924 ms
+11
+OUT:
+T-depth: 9
+Took: 722268 ms
+12
+OUT:
+T-depth: 4
+Took: 36874 ms
+13
+OUT:
+T-depth: 8
+Took: 295576 ms
+14
+OUT:
+none
+Took: 571070 ms
+15
+OUT:
+T-depth: 9
+Took: 416236 ms
+16
+OUT:
+T-depth: 7
+Took: 190807 ms
+17
+OUT:
+none
+Took: 866304 ms
+18
+OUT:
+none
+Took: 1829967 ms
+19
+OUT:
+none
+Took: 955146 ms
+20
+OUT:
+none
+Took: 459824 ms
+21
+OUT:
+none
+Took: 2422445 ms
+22
+OUT:
+T-depth: 6
+Took: 73414 ms
+23
+OUT:
+none
+Took: 943862 ms
+24
+OUT:
+T-depth: 7
+Took: 228926 ms
+25
+OUT:
+T-depth: 8
+Took: 1283200 ms
+26
+OUT:
+none
+Took: 1554912 ms
+27
+OUT:
+T-depth: 6
+Took: 87582 ms
+28
+OUT:
+T-depth: 4
+Took: 31351 ms
+29
+OUT:
+none
+Took: 569626 ms

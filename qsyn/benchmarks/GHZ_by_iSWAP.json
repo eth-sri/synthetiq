@@ -1,0 +1,18 @@
+{
+    "ID": "GHZ_by_iSWAP",
+    "Spec Type": "Partial Spec",
+    "Spec": {
+        "qreg_size": "3",
+        "max_inst_allowed": "10",
+        "spec_object": [
+            {
+                "input":  "1,  0,  0,  0,  0, 0, 0, 0 ",
+                "output": "0.70710678118,  0,  0, 0,  0, 0, 0, 0.70710678118"
+            }
+        ],
+        "components": "iSWAP, Rx_-pi/2, Ry_pi/2"
+    },
+    "Equiv Phase" : true
+}
+
+

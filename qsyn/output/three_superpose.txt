@@ -1,0 +1,64 @@
+Do Gate Operations Normalization
+Reducde to 6->6
+MAX MODULE NUM is : 5
+bool [cirq.X]
+phasing []
+sp [cirq.ControlledGate(sub_gate=cirq.H), cirq.Ry(rads=1.9106332362490184)]
+entangle []
+[cirq.ControlledGate(sub_gate=cirq.H), cirq.X]
+{cirq.Ry(rads=1.9106332362490184): 4}
+dict_keys([cirq.Ry(rads=1.9106332362490184)])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 2
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))
+cost (0, 0, -1)
+None
+** cnt_num_of_passed_module after seeing all modules in pool ** 4
+===================
+curr state
+
+Moment #0 
+	-[ Ry(0.6081734479693927π)(0)]
+Moment #1 
+	-[ CH(0, 1)]
+
+curr_targ_differ ('Bool', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})}))] ('Bool', None)
+cost (1, 2, 0)
+GEN for ('Bool', None)
+GEN DONE 6
+MODULES were  [('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Bool', None)]
+================================
+Synthesis Result
+Benchmark : three_superpose
+Mode : Ours
+================================
+Synthesized QC
+0: ───Ry(0.608π)───@───X───
+                   │
+1: ────────────────H───────
+Stacked Moduels
+[('Entangle', ({frozenset({1}), frozenset({0})}, {frozenset({0, 1})})), ('Bool', None)]
+Elapsed Time :  0.07

@@ -1,0 +1,16 @@
+{
+    "ID": "GHZ_from_100",
+    "Spec Type": "Partial Spec",
+    "Spec": {
+        "qreg_size": "3",
+        "max_inst_allowed": "10",
+        "spec_object": [
+            {
+                "input":  "0,  0,  0,  0,  1, 0, 0, 0 ",
+                "output": " 0.70710678118,  0,  0,  0,  0, 0, 0, 0.70710678118 "
+            }
+        ],
+        "components": "H, CNOT"
+    },
+    "Equiv Phase" : true
+}

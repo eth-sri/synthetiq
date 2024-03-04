@@ -1,0 +1,208 @@
+Algorithm 2
+n = 3
+IN: sde = 4
+IN: T-depth target = 11
+------------------
+PARENT LEVEL i: 1
+# of parent hyper-nodes: 1
+Parents (hyper-node,size): [(0,1)]
+Sorted parents by size:    [(0,1)]
+Computing the children nodes...
+	Computing children of parent hyper-node: 0 [size: 1]
+		[*] Took: 886 ms; Average per parent node: 886 ms
+Number of children nodes (USH size): 496
+Now displaying the children nodes, unfiltered (SH): 
+	(sde=4, delta_ham=-1, T_path=1) | count=6
+	(sde=5, delta_ham=-1, T_path=1) | count=4
+	(sde=5, delta_ham=1, T_path=1) | count=116
+	(sde=3, delta_ham=-1, T_path=2) | count=2
+	(sde=4, delta_ham=-1, T_path=2) | count=4
+	(sde=4, delta_ham=0, T_path=2) | count=1
+	(sde=4, delta_ham=1, T_path=2) | count=2
+	(sde=5, delta_ham=-1, T_path=2) | count=24
+	(sde=5, delta_ham=0, T_path=2) | count=4
+	(sde=5, delta_ham=1, T_path=2) | count=27
+	(sde=6, delta_ham=0, T_path=2) | count=6
+	(sde=6, delta_ham=1, T_path=2) | count=131
+	(sde=4, delta_ham=-1, T_path=3) | count=8
+	(sde=5, delta_ham=-1, T_path=3) | count=6
+	(sde=5, delta_ham=1, T_path=3) | count=24
+	(sde=6, delta_ham=-1, T_path=3) | count=9
+	(sde=6, delta_ham=1, T_path=3) | count=54
+	(sde=7, delta_ham=1, T_path=3) | count=68
+Children hyper-nodes before filtering (the P set): 1 2 3 
+Children hyper-nodes after filtering (the P set): 1 2 3 
+Minimal elements (filtered): 
+	(sde=5, delta_ham=-1, T_path=1) | count=4
+	(sde=4, delta_ham=0, T_path=2) | count=1
+	(sde=5, delta_ham=-1, T_path=3) | count=6
+Filtering the children nodes in all children hyper-nodes...
+	[*] Took: 15 ms
+Number of children nodes after filtering (size of G): 11
+------------------
+PARENT LEVEL i: 2
+# of parent hyper-nodes: 3
+Parents (hyper-node,size): [(1,4) (2,1) (3,6)]
+Sorted parents by size:    [(2,1) (1,4) (3,6)]
+Computing the children nodes...
+	Computing children of parent hyper-node: 2 [size: 1]
+		[*] Current time: 2023-03-31 13:40:09
+		[*] Expected to take: 886 ms, and to finish by: 2023-03-31 13:40:10
+		[*] Took: 797 ms; Average per parent node: 797 ms
+	Computing children of parent hyper-node: 1 [size: 4]
+		[*] Current time: 2023-03-31 13:40:10
+		[*] Expected to take: 3188 ms, and to finish by: 2023-03-31 13:40:13
+		[*] Took: 3074 ms; Average per parent node: 768 ms
+	Computing children of parent hyper-node: 3 [size: 6]
+		[*] Current time: 2023-03-31 13:40:13
+		[*] Expected to take: 4608 ms, and to finish by: 2023-03-31 13:40:18
+		[*] Took: 5264 ms; Average per parent node: 877 ms
+Number of children nodes (USH size): 5456
+Now displaying the children nodes, unfiltered (SH): 
+	(sde=4, delta_ham=-1, T_path=2) | count=24
+	(sde=4, delta_ham=1, T_path=2) | count=8
+	(sde=5, delta_ham=-1, T_path=2) | count=8
+	(sde=5, delta_ham=1, T_path=2) | count=16
+	(sde=6, delta_ham=1, T_path=2) | count=448
+	(sde=3, delta_ham=-1, T_path=3) | count=6
+	(sde=4, delta_ham=-1, T_path=3) | count=22
+	(sde=4, delta_ham=1, T_path=3) | count=6
+	(sde=5, delta_ham=-1, T_path=3) | count=16
+	(sde=5, delta_ham=0, T_path=3) | count=60
+	(sde=5, delta_ham=1, T_path=3) | count=276
+	(sde=6, delta_ham=-1, T_path=3) | count=16
+	(sde=6, delta_ham=1, T_path=3) | count=136
+	(sde=7, delta_ham=1, T_path=3) | count=392
+	(sde=3, delta_ham=-1, T_path=4) | count=10
+	(sde=4, delta_ham=-1, T_path=4) | count=36
+	(sde=4, delta_ham=0, T_path=4) | count=1
+	(sde=4, delta_ham=1, T_path=4) | count=26
+	(sde=5, delta_ham=-1, T_path=4) | count=102
+	(sde=5, delta_ham=0, T_path=4) | count=4
+	(sde=5, delta_ham=1, T_path=4) | count=85
+	(sde=6, delta_ham=0, T_path=4) | count=6
+	(sde=6, delta_ham=1, T_path=4) | count=1099
+	(sde=7, delta_ham=1, T_path=4) | count=120
+	(sde=8, delta_ham=1, T_path=4) | count=144
+	(sde=3, delta_ham=-1, T_path=5) | count=3
+	(sde=4, delta_ham=-1, T_path=5) | count=34
+	(sde=4, delta_ham=1, T_path=5) | count=5
+	(sde=5, delta_ham=-1, T_path=5) | count=22
+	(sde=5, delta_ham=0, T_path=5) | count=70
+	(sde=5, delta_ham=1, T_path=5) | count=162
+	(sde=6, delta_ham=-1, T_path=5) | count=47
+	(sde=6, delta_ham=1, T_path=5) | count=328
+	(sde=7, delta_ham=1, T_path=5) | count=704
+	(sde=3, delta_ham=-1, T_path=6) | count=7
+	(sde=4, delta_ham=-1, T_path=6) | count=10
+	(sde=4, delta_ham=1, T_path=6) | count=25
+	(sde=5, delta_ham=-1, T_path=6) | count=52
+	(sde=5, delta_ham=1, T_path=6) | count=70
+	(sde=6, delta_ham=1, T_path=6) | count=326
+	(sde=7, delta_ham=-1, T_path=6) | count=8
+	(sde=7, delta_ham=1, T_path=6) | count=276
+	(sde=8, delta_ham=1, T_path=6) | count=240
+Children hyper-nodes before filtering (the P set): 2 3 4 5 6 
+Children hyper-nodes after filtering (the P set): 2 3 4 5 6 
+Minimal elements (filtered): 
+	(sde=4, delta_ham=1, T_path=2) | count=8
+	(sde=3, delta_ham=-1, T_path=3) | count=6
+	(sde=4, delta_ham=0, T_path=4) | count=1
+	(sde=3, delta_ham=-1, T_path=5) | count=3
+	(sde=3, delta_ham=-1, T_path=6) | count=7
+Filtering the children nodes in all children hyper-nodes...
+	[*] Current time: 2023-03-31 13:40:18
+	[*] Expected to take no more than: 25 ms, and to finish by: 2023-03-31 13:40:18
+	[*] Took: 35 ms
+Number of children nodes after filtering (size of G): 20
+------------------
+PARENT LEVEL i: 3
+# of parent hyper-nodes: 5
+Parents (hyper-node,size): [(2,5) (3,5) (4,1) (5,2) (6,7)]
+Sorted parents by size:    [(4,1) (5,2) (2,5) (3,5) (6,7)]
+Computing the children nodes...
+	Computing children of parent hyper-node: 4 [size: 1]
+		[*] Current time: 2023-03-31 13:40:19
+		[*] Expected to take: 877 ms, and to finish by: 2023-03-31 13:40:19
+		[*] Took: 906 ms; Average per parent node: 906 ms
+	Computing children of parent hyper-node: 5 [size: 2]
+		[*] Current time: 2023-03-31 13:40:19
+		[*] Expected to take: 1812 ms, and to finish by: 2023-03-31 13:40:21
+		[*] Took: 1325 ms; Average per parent node: 662 ms
+	Computing children of parent hyper-node: 2 [size: 5]
+		[*] Current time: 2023-03-31 13:40:21
+		[*] Expected to take: 3310 ms, and to finish by: 2023-03-31 13:40:24
+		[*] Took: 6120 ms; Average per parent node: 1224 ms
+	Computing children of parent hyper-node: 3 [size: 5]
+		[*] Current time: 2023-03-31 13:40:27
+		[*] Expected to take: 6120 ms, and to finish by: 2023-03-31 13:40:33
+		[*] Took: 5908 ms; Average per parent node: 1181 ms
+	Computing children of parent hyper-node: 6 [size: 7]
+		[*] Current time: 2023-03-31 13:40:33
+		[*] Expected to take: 8267 ms, and to finish by: 2023-03-31 13:40:41
+		[*] Took: 4766 ms; Average per parent node: 680 ms
+Number of children nodes (USH size): 9920
+Now displaying the children nodes, unfiltered (SH): 
+	(sde=4, delta_ham=-1, T_path=3) | count=30
+	(sde=5, delta_ham=-1, T_path=3) | count=20
+	(sde=5, delta_ham=1, T_path=3) | count=580
+	(sde=3, delta_ham=-1, T_path=4) | count=40
+	(sde=4, delta_ham=-1, T_path=4) | count=20
+	(sde=4, delta_ham=0, T_path=4) | count=5
+	(sde=4, delta_ham=1, T_path=4) | count=610
+	(sde=5, delta_ham=-1, T_path=4) | count=120
+	(sde=5, delta_ham=0, T_path=4) | count=20
+	(sde=5, delta_ham=1, T_path=4) | count=135
+	(sde=6, delta_ham=0, T_path=4) | count=30
+	(sde=6, delta_ham=1, T_path=4) | count=655
+	(sde=2, delta_ham=-1, T_path=5) | count=10
+	(sde=3, delta_ham=0, T_path=5) | count=5
+	(sde=4, delta_ham=-1, T_path=5) | count=66
+	(sde=4, delta_ham=1, T_path=5) | count=208
+	(sde=5, delta_ham=-1, T_path=5) | count=34
+	(sde=5, delta_ham=1, T_path=5) | count=998
+	(sde=6, delta_ham=-1, T_path=5) | count=45
+	(sde=6, delta_ham=1, T_path=5) | count=270
+	(sde=7, delta_ham=1, T_path=5) | count=340
+	(sde=3, delta_ham=-1, T_path=6) | count=34
+	(sde=4, delta_ham=-1, T_path=6) | count=4
+	(sde=4, delta_ham=0, T_path=6) | count=1
+	(sde=4, delta_ham=1, T_path=6) | count=305
+	(sde=5, delta_ham=-1, T_path=6) | count=24
+	(sde=5, delta_ham=0, T_path=6) | count=4
+	(sde=5, delta_ham=1, T_path=6) | count=413
+	(sde=6, delta_ham=0, T_path=6) | count=6
+	(sde=6, delta_ham=1, T_path=6) | count=507
+	(sde=2, delta_ham=-1, T_path=7) | count=16
+	(sde=3, delta_ham=0, T_path=7) | count=2
+	(sde=3, delta_ham=1, T_path=7) | count=10
+	(sde=4, delta_ham=-1, T_path=7) | count=52
+	(sde=4, delta_ham=1, T_path=7) | count=907
+	(sde=5, delta_ham=-1, T_path=7) | count=6
+	(sde=5, delta_ham=1, T_path=7) | count=329
+	(sde=6, delta_ham=-1, T_path=7) | count=9
+	(sde=6, delta_ham=1, T_path=7) | count=54
+	(sde=7, delta_ham=1, T_path=7) | count=68
+	(sde=1, delta_ham=-1, T_path=8) | count=1
+	(sde=3, delta_ham=-1, T_path=8) | count=23
+	(sde=3, delta_ham=0, T_path=8) | count=60
+	(sde=3, delta_ham=1, T_path=8) | count=13
+	(sde=4, delta_ham=1, T_path=8) | count=258
+	(sde=5, delta_ham=1, T_path=8) | count=1238
+	(sde=6, delta_ham=1, T_path=8) | count=152
+	(sde=2, delta_ham=-1, T_path=9) | count=6
+	(sde=3, delta_ham=1, T_path=9) | count=10
+	(sde=4, delta_ham=-1, T_path=9) | count=35
+	(sde=4, delta_ham=1, T_path=9) | count=169
+	(sde=5, delta_ham=1, T_path=9) | count=471
+	(sde=6, delta_ham=1, T_path=9) | count=492
+Found a node with sde == 1, exiting
+------------------
+OUT:
+T-depth: 4
+T-path: 9
+We finished when sde == 1, C0 not available
+Filtered G nodes per hyper-tree level: [11 20]
+Max. num. nodes per hyper-tree level: 20
+Avg. num. nodes: 15.5
+Took: 29111 ms

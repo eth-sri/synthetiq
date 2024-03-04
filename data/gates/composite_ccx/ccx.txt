@@ -1,0 +1,26 @@
+ccx
+3
+0 1 2
+h 2
+s 0
+sdg 1
+tdg 0
+tdg 1
+tdg 2
+cx 1 0
+tdg 0
+cx 2 1
+tdg 1
+cx 0 2
+cx 0 1
+t 2
+tdg 1
+cx 2 1
+h 2
+sdg 1
+sdg 1
+sdg 2
+h 2
+cx 0 2
+sdg 2
+cx 1 0

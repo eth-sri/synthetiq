@@ -1,0 +1,73 @@
+Do Gate Operations Normalization
+Reducde to 40->40
+MAX MODULE NUM is : 5
+bool [cirq.ControlledGate(sub_gate=cirq.X, control_values=((0,), (0,)),control_qid_shape=(2, 2)), cirq.CNOT, cirq.TOFFOLI]
+phasing []
+sp [cirq.H]
+entangle []
+[cirq.ControlledGate(sub_gate=cirq.X, control_values=((0,), (0,)),control_qid_shape=(2, 2)), cirq.CNOT, cirq.H, cirq.TOFFOLI]
+{}
+dict_keys([])
+{}
+Rule Selection Rotuine
+C_RULE_ID ['triple_span', 'span', 'open_and_close_B', 'open_and_close_P', 'open_and_close_NC']
+P_RULE_ID ['span', 'open_and_close_B']
+NC_RULE_ID ['add']
+prior module generating
+module_gate_num is 4
+prior module gen at level 1 done
+prior module gen at level 2 done
+prior module gen at level 3 done
+prior module gen done
+Modular Search state search!
+concrete_criterion : False
+naive_module_gen : True
+**Initial State is**
+EMPTY STATE
+********************
+Initdiffers
+[('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})}))]
+===================
+curr state
+
+EMPTY STATE
+curr_targ_differ ('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})}))
+check_order : stacked, targ_diff [] ('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})}))
+cost (0, 0, -1)
+None
+** cnt_num_of_passed_module after seeing all modules in pool ** 2400
+===================
+curr state
+
+Moment #0 
+	-[ H(0) H(1)]
+Moment #1 
+	-[ CNOT(0, 2)]
+Moment #2 
+	-[ C0C0X(0, 1, 3)]
+
+curr_targ_differ ('Bool', None)
+check_order : stacked, targ_diff [('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})}))] ('Bool', None)
+cost (1, 4, 0)
+3
+GEN for ('Bool', None)
+Further Evolve Start
+GEN DONE 1617108
+the generated module is too many,,,maybe module of smaller length will be enough
+MODULES were  [('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})})), ('Bool', None)]
+================================
+Synthesis Result
+Benchmark : W_four
+Mode : Ours
+================================
+Synthesized QC
+0: ───H───@───(0)───X───@───────
+          │   │     │   │
+1: ───H───┼───(0)───@───┼───X───
+          │   │     │   │   │
+2: ───────X───┼─────@───X───@───
+              │
+3: ───────────X─────────────────
+Stacked Moduels
+[('Entangle', ({frozenset({3}), frozenset({2}), frozenset({1}), frozenset({0})}, {frozenset({0, 1, 2, 3})})), ('Bool', None)]
+Elapsed Time :  390.35

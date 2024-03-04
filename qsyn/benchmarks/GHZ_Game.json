@@ -1,0 +1,16 @@
+{
+    "ID": "GHZ_Game",
+    "Spec Type": "Partial Spec",
+    "Spec": {
+        "qreg_size": "3",
+        "max_inst_allowed": "10",
+        "spec_object": [
+            {
+                "input":  "1,  0,  0,  0,  0, 0, 0, 0 ",
+                "output": " 0.5,  0,  0,  -0.5,  0, -0.5, -0.5, 0 "
+            }
+        ],
+        "components": "H,  X, CZ"
+    },
+    "Equiv Phase" : true
+}

@@ -381,6 +381,7 @@ All the implementation of Synthetiq is in the folder [`synthetiq`](synthetiq/). 
 
 ## Cite
 
+```
 @inproceedings{paradis2024synthetiq,
   title={Synthetiq: Fast and Versatile Quantum Circuit Synthesis},
   author={Paradis, Anouk and Dekoninck, Jasper and Bichsel, Benjamin and Vechev, Martin},
@@ -389,3 +390,4 @@ All the implementation of Synthetiq is in the folder [`synthetiq`](synthetiq/). 
   number       = {{OOPSLA1}},
   year={2024},
 }
+```

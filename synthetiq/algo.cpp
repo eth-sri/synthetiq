@@ -130,15 +130,21 @@ void Parser::parse(int argc, char* argv[]) {
             while (std::getline(ss, token, ',')) {
                 depth_gates.push_back(token);
             }
+        } else if (std::string(argv[arg]) == "--absolute-input") {
+            base_input_folder = "";
+        } else if (std::string(argv[arg]) == "--absolute-output") {
+            base_output_folder = "";
+        } else if (std::string(argv[arg]) == "--absolute-gates") {
+            base_gate_folder = "";
         }
     }
 
     // print all the parameters
-    std::cout << "Input file: " << input_name << std::endl;
-    std::cout << "Output folder: " << output_folder << std::endl;
+    std::cout << "Input file: " << base_input_folder + input_name << std::endl;
+    std::cout << "Output folder: " << base_output_folder + output_folder << std::endl;
     std::cout << "Format: " << format << std::endl;
-    std::cout << "Gate set: " << gate_set << std::endl;
-    std::cout << "Composite gate folder: " << composite_gate_folder << std::endl;
+    std::cout << "Gate set: " << base_gate_folder + gate_set << std::endl;
+    std::cout << "Composite gate folder: " << base_gate_folder + composite_gate_folder << std::endl;
     std::cout << "Number of threads: " << n_threads << std::endl;
     std::cout << "Number of circuits to find: " << n_found_stop << std::endl;
     std::cout << "Number of ancillas: " << n_ancillas << std::endl;

@@ -60,11 +60,11 @@ For instance, running
 will run Synthetiq for the specification in the file [`data/input/cx.txt`](data/input/cx.txt), using the Clifford+T gate set. This run will last either 100s or until 10 circuits implementing this specification are found. You should get an output similar to the following:
 
 ```bash
-Input file: cx.txt
-Output folder: cx/
+Input file: data/input/cx.txt
+Output folder: data/output/cx/
 Format: txt
-Gate set: CliffordT
-Composite gate folder: composite_gates
+Gate set: data/gates/CliffordT
+Composite gate folder: data/gates/composite_gates
 Number of threads: 1
 Number of circuits to find: 10
 Number of ancillas: 0
@@ -292,6 +292,10 @@ We now list the main optional arguments Synthetiq provides, along with their def
 | --tdepth / -td | None | Synthetiq will discard and ignore any implementation with a higher T-depth |
 | --gate-count / -gc | None | Synthetiq will discard and ignore any implementation with a higher gate count |
 | --cost-required / -cr | None | Synthetiq will discard and ignore any implementation with a higher total cost |
+| --absolute-input | false | The input file specified is an absolute path instead of a path relative to data/input |
+| --absolute-output | false | The output folder specified is an absolute path instead of a path relative to data/output |
+| --absolute-gates | false | The gate folder specified is an absolute path instead of a path relative to data/gates |
+
 
 For instance, setting more arguments explicitly for the example above results in the following command:
 ```bash

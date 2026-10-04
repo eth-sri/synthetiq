@@ -17,6 +17,9 @@ For all claims, we provide all the benchmarks we used. Further, for Claim 3, we 
 No specific hardware is required to run Synthetiq. However, re-running our complete evaluation requires more than a week of compute on a machine with 64 cores.
 To allow evaluation of this artifact, we therefore provide (i) instructions to re-run it completely, (ii) instructions to re-run only a small subset of it (with only a few hours of compute) and (iii) the raw results of a complete re-run, as well as instructions on how to reproduce our paper's figures and tables from those. Note that as those raw results are from a re-run and Synthetiq is based on a random process, we expect to see slight variations in the final results.
 
+# Update 03/10/2026
+We ported the Synthetiq codebase to Rust and added various new optimizations that improve the performance of Synthetiq. We recommend using the Rust version of Synthetiq for any future work.
+
 # Getting Started Guide 
 ## Installation
 Synthetiq can either be installed directly or through Docker. After unzipping the artifact, run the following from its main folder.
@@ -41,6 +44,16 @@ Then, install Synthetiq:
 ```bash
 make clean
 make all
+```
+
+### Rust
+
+With Rust and Cargo installed, run from the repository root:
+
+```bash
+make rust
+./bin/rust cx.txt --threads 4
+./bin/rust --help
 ```
 
 ### Installation Using Docker

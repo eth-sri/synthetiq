@@ -1,0 +1,23 @@
+[package]
+name = "synthetiq"
+version = "0.1.0"
+edition = "2021"
+description = "Quantum circuit synthesis over arbitrary finite gate sets"
+license = "MIT"
+default-run = "synthetiq"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "synthetiq"
+path = "src/main.rs"
+
+[[bin]]
+name = "main_resynth"
+path = "src/bin/main_resynth.rs"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+

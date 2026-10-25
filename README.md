@@ -1,6 +1,8 @@
 # Introduction
 This repository contains the code for the paper 'Synthetiq: Fast and Versatile Quantum Circuit Synthesis'. Synthetiq is a tool to synthesize quantum circuits implementing a given (partial) specification over arbitrary finite gate sets and is faster and more versatile than existing works. This README is a guide on installing and using Synthetiq, as well as replicating the paper's results.
 
+The code used in the paper is available at commit [59a0cc6](https://github.com/eth-sri/synthetiq/commit/59a0cc6942c9561033a762ced2c35ceab9b876c3). The current version is a Rust rewrite that runs slightly faster.
+
 For easy reference, all quantum circuits found by Synthetiq and mentioned in the paper can be found in [`data/circuits`](data/circuits), under the subfolder corresponding to the subsection they are mentioned in. All circuits are in OpenQASM 2.0 format. 
 
 We describe how to reproduce all claims made in the paper. We recall them here from Section 6 in the paper, and indicate for each the relevant figures.
